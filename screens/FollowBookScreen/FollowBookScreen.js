@@ -10,7 +10,7 @@ const FollowBook = ({route, navigation}) => {
 
     const toggleFollow = () => {
         Alert.alert(`Book ${followingState}`);
-        navigation.navigate('HomeScreen');
+        navigation.navigate('BooksScreen');
     }
 
     return(
