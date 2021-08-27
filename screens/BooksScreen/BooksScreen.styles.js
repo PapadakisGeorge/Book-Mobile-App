@@ -33,7 +33,7 @@ export const booksScreenStyles = StyleSheet.create({
             fontWeight: '600',
             paddingTop: 15
     },
-    bookButton: {
+    button: {
         fontFamily: 'Ubuntu-Regular',
         fontWeight: 'bold',
         textAlign: 'center',

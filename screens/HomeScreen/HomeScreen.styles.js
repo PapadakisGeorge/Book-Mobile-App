@@ -13,7 +13,8 @@ export const homeScreenStyles = StyleSheet.create({
     },
     appLogo: {
     height: 100,
-    width: 150
+    width: 150,
+    borderRadius: 40,
     },
     title: {
         fontFamily: 'Ubuntu-Regular'
@@ -27,7 +28,7 @@ export const homeScreenStyles = StyleSheet.create({
         fontWeight: '300'
     },
     heroImage:{
-        height: 170,
+        height: 200,
         width: '100%'
     },
     menu: {

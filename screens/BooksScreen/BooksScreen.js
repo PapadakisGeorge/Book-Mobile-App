@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Image } from 'react-native';
-import bookList from './BookDB';
+import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
+import bookList from '../../dataBases/BookDB';
 import { booksScreenStyles } from './BooksScreen.styles';
 
-const BooksScreen = () => {
+const BooksScreen = ({navigation}) => {
     const bookItem = ({item}) => {
         return(
             <View style={booksScreenStyles.books}>
@@ -27,9 +27,15 @@ const BooksScreen = () => {
                     >
                         {item.description}
                     </Text>
-                    <Text style={booksScreenStyles.bookButton}>
-                        Get Book
-                    </Text>
+                    <TouchableOpacity
+                        onPress={() =>{
+                            navigation.navigate('FollowBookScreen', {bookId: item.eventId})
+                            }
+                        }
+                        style={booksScreenStyles.button}
+                    >
+                        <Text style={booksScreenStyles.button}>Follow Book</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );

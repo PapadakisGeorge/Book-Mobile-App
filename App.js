@@ -5,8 +5,10 @@ import {
 } from 'react-native';
 import { NavigationContainer} from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from './screens/HomeScreen/HomeScreen';
+import ContactScreen from './screens/ContactScreen/ContactScreen';
 import BooksScreen from './screens/BooksScreen/BooksScreen';
+import HomeScreen from './screens/HomeScreen/HomeScreen';
+import FollowBookScreen from './screens/FollowBookScreen/FollowBookScreen';
 
 const Stack = createStackNavigator();
 const App: () => React$Node = () => {
@@ -35,7 +37,24 @@ const App: () => React$Node = () => {
                         headerTitleStyle: {fontFamily: 'Ubuntu-Regular'}
                     }}
                  />
-
+                <Stack.Screen
+                    name='ContactScreen'
+                    component={ContactScreen}
+                    options={{
+                         headerTitleAlign: 'center',
+                         headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+                         headerTitle: 'Contact Us'
+                    }}
+                />
+                <Stack.Screen
+                    name='FollowBookScreen'
+                    component={FollowBookScreen}
+                    options={{
+                        headerTitleAlign: 'center',
+                        headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+                        headerTitle: 'Follow Book'
+                    }}
+                />
          </Stack.Navigator>
     </NavigationContainer>
     </>
