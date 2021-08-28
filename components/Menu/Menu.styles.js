@@ -7,8 +7,8 @@ export const menuStyles = StyleSheet.create({
     button: {
         borderTopWidth: 1,
         borderBottomWidth: 1,
-        marginRight: 100,
-        marginLeft: 100
+        marginRight: 50,
+        marginLeft: 50
     },
     buttonText: {
         fontFamily: 'Ubuntu-Regular'

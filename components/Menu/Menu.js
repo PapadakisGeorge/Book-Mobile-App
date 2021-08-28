@@ -16,13 +16,19 @@ const Menu = () => {
                 <Text style={menuStyles.buttonText}>Books</Text>
             </TouchableOpacity>
             <TouchableOpacity
-               onPress={() => { navigation.navigate('ContactScreen')}}
+                onPress={() => { navigation.navigate('ContactScreen')}}
                style={menuStyles.button}
             >
                 <Text style={menuStyles.buttonText}>Contact Us</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => { navigation.navigate('NewsScreen')}}
+                style={menuStyles.button}
+            >
+                 <Text style={menuStyles.buttonText}>News</Text>
+            </TouchableOpacity>
         </View>
-    )
+    );
 }
 
 export default Menu;

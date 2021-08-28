@@ -8,6 +8,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import ContactScreen from './screens/ContactScreen/ContactScreen';
 import BooksScreen from './screens/BooksScreen/BooksScreen';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
+import NewsScreen from './screens/NewsScreen/NewsScreen';
 import FollowBookScreen from './screens/FollowBookScreen/FollowBookScreen';
 
 const Stack = createStackNavigator();
@@ -54,6 +55,15 @@ const App: () => React$Node = () => {
                         headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
                         headerTitle: 'Follow Book'
                     }}
+                />
+                <Stack.Screen
+                    name='NewsScreen'
+                    component={NewsScreen}
+                    options={{
+                         headerTitleAlign: 'center',
+                         headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+                         headerTitle: 'Latest News'
+                     }}
                 />
          </Stack.Navigator>
     </NavigationContainer>
