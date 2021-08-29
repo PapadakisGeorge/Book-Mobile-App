@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
-import bookList from '../../dataBases/BookDB';
+import { Text, View, FlatList, Image, TouchableOpacity } from 'react-native';
 import { booksScreenStyles } from './BooksScreen.styles';
+import bookList from '../../dataBases/BookDB';
+
 
 const BooksScreen = ({navigation}) => {
     const bookItem = ({item}) => {
@@ -28,7 +29,7 @@ const BooksScreen = ({navigation}) => {
                         {item.description}
                     </Text>
                     <TouchableOpacity
-                        onPress={() =>{
+                        onPress={() => {
                             navigation.navigate('FollowBookScreen', {bookId: item.eventId})
                             }
                         }

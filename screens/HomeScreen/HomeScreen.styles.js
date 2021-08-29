@@ -12,9 +12,9 @@ export const homeScreenStyles = StyleSheet.create({
         padding: 20
     },
     appLogo: {
-    height: 100,
-    width: 150,
-    borderRadius: 40,
+        height: 100,
+        width: 150,
+        borderRadius: 40,
     },
     title: {
         fontFamily: 'Ubuntu-Regular'
@@ -32,7 +32,16 @@ export const homeScreenStyles = StyleSheet.create({
         width: '100%'
     },
     menu: {
-    position: 'absolute',
-    bottom: 10
+        position: 'absolute',
+        bottom: 10
+    },
+    button: {
+        borderTopWidth: 1,
+        borderBottomWidth: 1,
+        marginRight: 50,
+        marginLeft: 50
+    },
+    buttonText: {
+        fontFamily: 'Ubuntu-Regular'
     }
 })

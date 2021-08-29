@@ -1,17 +1,30 @@
 import React from 'react';
-import { View, Image, Text, StyleSheet } from 'react-native';
+import { View, Image, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import {homeScreenStyles} from './HomeScreen.styles';
+import { useNavigation } from '@react-navigation/native';
 import Menu from '../../components/Menu/Menu';
 
 const HomeScreen = (props) => {
+
+    const navigation = useNavigation();
+
     return (
         <View style={homeScreenStyles.container}>
             <Image
                 style={homeScreenStyles.appLogo}
                 source={require('./assets/appLogo.png')}
-                />
-             <Text style={homeScreenStyles.title}>Welcome to BookApp</Text>
-             <Text style={homeScreenStyles.subtitle}>{props.username}</Text>
+            />
+            <Text style={homeScreenStyles.title}>Welcome to BookApp</Text>
+            <Text style={homeScreenStyles.subtitle}>Please Login</Text>
+            <TouchableOpacity
+                onPress={() =>{
+                   navigation.navigate('LoginScreen')
+                   }
+                }
+                style={homeScreenStyles.button}
+            >
+                <Text style={homeScreenStyles.buttonText}>Login</Text>
+            </TouchableOpacity>
              <Image
                    style={homeScreenStyles.heroImage}
                    source={require('./assets/boxing.jpg')}

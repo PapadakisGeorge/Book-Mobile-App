@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import {Button, Text, TextInput, View, Alert } from 'react-native';
-import {contactScreenStyles} from './ContactScreen.styles.js';
+import { Button, Text, TextInput, View, Alert } from 'react-native';
+import { contactScreenStyles } from './ContactScreen.styles.js';
 const ContactScreen = ({navigation}) => {
 
     const [formName, setFormName] = useState('Enter Name');
@@ -25,7 +25,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                 style={contactScreenStyles.textInput}
                 onChangeText={name => setFormName(name)}
-                value={formName}
+                placeholder={formName}
                 autoCapitalize='words'
                 setTextOnFocus={true}
             />
@@ -35,7 +35,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                  style={contactScreenStyles.textInput}
                  onChangeText={email => setFormEmail(email)}
-                 value={formEmail}
+                 placeholder={formEmail}
                  setTextOnFocus={true}
             />
 
@@ -43,7 +43,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                   style={contactScreenStyles.textInput}
                   onChangeText={phoneNumber => setFormPhoneNumber(phoneNumber)}
-                  value={formPhoneNumber}
+                  placeholder={formPhoneNumber}
                   setTextOnFocus={true}
             />
             <Text style={contactScreenStyles.labels}>
@@ -52,7 +52,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                  style={contactScreenStyles.multiTextInput}
                  onChangeText={message => setFormMessage(message)}
-                 value={formMessage}
+                 placeholder={formMessage}
                  multiline={true}
                  numberOfLines={3}
                  setTextOnFocus={true}

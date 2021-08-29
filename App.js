@@ -10,6 +10,7 @@ import BooksScreen from './screens/BooksScreen/BooksScreen';
 import HomeScreen from './screens/HomeScreen/HomeScreen';
 import NewsScreen from './screens/NewsScreen/NewsScreen';
 import FollowBookScreen from './screens/FollowBookScreen/FollowBookScreen';
+import LoginScreen from './screens/LoginScreen/LoginScreen';
 
 const Stack = createStackNavigator();
 const App: () => React$Node = () => {
@@ -63,7 +64,16 @@ const App: () => React$Node = () => {
                          headerTitleAlign: 'center',
                          headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
                          headerTitle: 'Latest News'
-                     }}
+                    }}
+                />
+                <Stack.Screen
+                    name='LoginScreen'
+                    component={LoginScreen}
+                    options={{
+                       headerTitleAlign: 'center',
+                       headerTitleStyle: {fontFamily: 'Ubuntu-Regular'},
+                       headerTitle: 'Login',
+                    }}
                 />
          </Stack.Navigator>
     </NavigationContainer>

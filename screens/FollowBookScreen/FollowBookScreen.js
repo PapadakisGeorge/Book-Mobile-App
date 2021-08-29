@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Text, View, Image, TextInput, Alert, TouchableOpacity } from 'react-native';
+import { followBookScreenStyles } from './FollowBookScreen.styles.js';
 import bookList from '../../dataBases/BookDB';
-import {followBookScreenStyles} from './FollowBookScreen.styles.js';
 
-const FollowBook = ({route, navigation}) => {
+const FollowBookScreen = ({route, navigation}) => {
     const [followingState, setFollowingState] = useState('unfollowed');
     const {bookId} = route.params;
     const selectedBook = bookList.find(books => books.eventId === bookId );
@@ -41,4 +41,4 @@ const FollowBook = ({route, navigation}) => {
     )
 }
 
-export default FollowBook;
+export default FollowBookScreen;
