@@ -19,7 +19,9 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: gradle
-
+          - uses: malinskiy/action-android/install-sdk@release/0.1.2
+          - run: sdkmanager platform-tools
+          - run: adb devices
     - name: Install Dependencies
       run: npm install
     - name: Build App
