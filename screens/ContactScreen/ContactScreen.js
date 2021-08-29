@@ -3,10 +3,10 @@ import { Button, Text, TextInput, View, Alert } from 'react-native';
 import { contactScreenStyles } from './ContactScreen.styles.js';
 const ContactScreen = ({navigation}) => {
 
-    const [formName, setFormName] = useState('Enter Name');
-    const [formEmail, setFormEmail] = useState('Enter Email');
-    const [formPhoneNumber, setFormPhoneNumber] = useState('Enter Phone Number');
-    const [formMessage, setFormMessage] = useState('What is in your mind');
+    const [formName, setFormName] = useState();
+    const [formEmail, setFormEmail] = useState();
+    const [formPhoneNumber, setFormPhoneNumber] = useState();
+    const [formMessage, setFormMessage] = useState();
 
     const submit = () => {
         if (!formName || !formEmail || !formMessage){
@@ -25,7 +25,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                 style={contactScreenStyles.textInput}
                 onChangeText={name => setFormName(name)}
-                placeholder={formName}
+                placeholder={'Enter Name'}
                 autoCapitalize='words'
                 setTextOnFocus={true}
             />
@@ -35,7 +35,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                  style={contactScreenStyles.textInput}
                  onChangeText={email => setFormEmail(email)}
-                 placeholder={formEmail}
+                 placeholder={'Enter Email'}
                  setTextOnFocus={true}
             />
 
@@ -43,7 +43,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                   style={contactScreenStyles.textInput}
                   onChangeText={phoneNumber => setFormPhoneNumber(phoneNumber)}
-                  placeholder={formPhoneNumber}
+                  placeholder={'Enter Phone Number'}
                   setTextOnFocus={true}
             />
             <Text style={contactScreenStyles.labels}>
@@ -52,7 +52,7 @@ const ContactScreen = ({navigation}) => {
             <TextInput
                  style={contactScreenStyles.multiTextInput}
                  onChangeText={message => setFormMessage(message)}
-                 placeholder={formMessage}
+                 placeholder={'What is in your mind?'}
                  multiline={true}
                  numberOfLines={3}
                  setTextOnFocus={true}
