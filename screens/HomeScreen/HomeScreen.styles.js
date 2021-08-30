@@ -19,23 +19,21 @@ export const homeScreenStyles = StyleSheet.create({
     title: {
         fontFamily: 'Ubuntu-Regular'
     },
-    subtitle: {
-        paddingTop: 5,
-         fontFamily: 'Ubuntu-Regular'
-    },
     content: {
         fontFamily: 'Ubuntu-Light',
         fontWeight: '300'
     },
     heroImage:{
         height: 200,
-        width: '100%'
+        width: 500,
     },
     menu: {
         position: 'absolute',
         bottom: 10
     },
     button: {
+        paddingTop: 1,
+        paddingBottom: 1,
         borderTopWidth: 1,
         borderBottomWidth: 1,
         marginRight: 50,
