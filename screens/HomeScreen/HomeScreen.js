@@ -5,17 +5,16 @@ import { useNavigation } from '@react-navigation/native';
 import Menu from '../../components/Menu/Menu';
 import LoginComponent from '../../components/Login/LoginComponent'
 
-const HomeScreen = (props) => {
-
+const HomeScreen = ({route}, props) => {
 
     const navigation = useNavigation();
-    const Greeting = (props) => {
-                       const isLoggedIn = props.isLoggedIn;
-                       if (isLoggedIn) {
-                         return <LoginComponent/>;
-                       }
-                        return <Text style={homeScreenStyles.subtitle}>Hi #1 user!!!</Text>
-                     }
+    const isLoggedIn = route.params;
+    const Greeting = () => {
+        if (!isLoggedIn) {
+            return <LoginComponent/>;
+            }
+            return <Text style={homeScreenStyles.subtitle}>Hi #1 user!!!</Text>
+        }
 
     return (
         <View style={homeScreenStyles.container}>
@@ -24,17 +23,16 @@ const HomeScreen = (props) => {
                 source={require('./assets/appLogo.png')}
             />
             <Text style={homeScreenStyles.title}>Welcome to BookApp</Text>
-            <Greeting isLoggedIn = {true}/>
-            <View style={homeScreenStyles.container}>
-                <Image
-                    style={homeScreenStyles.heroImage}
-                    source={require('./assets/boxing.jpg')}
-                />
-            </View>
+            <Greeting/>
+
             <View style={homeScreenStyles.textContainer}>
                 <Text style={homeScreenStyles.content}>{introText}</Text>
             </View>
-            <View>
+            <View style={homeScreenStyles.container}>
+                            <Image
+                                style={homeScreenStyles.heroImage}
+                                source={require('./assets/boxing.jpg')}
+                            />
                 <Menu/>
             </View>
         </View>

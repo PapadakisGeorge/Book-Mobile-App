@@ -7,7 +7,7 @@ const Menu = () => {
 
     const navigation = useNavigation();
 
-    return(
+    return (
         <View style={menuStyles.menu}>
             <TouchableOpacity
                 onPress={() => { navigation.navigate('BooksScreen')}}

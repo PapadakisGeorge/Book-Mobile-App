@@ -41,5 +41,6 @@ export const homeScreenStyles = StyleSheet.create({
     },
     buttonText: {
         fontFamily: 'Ubuntu-Regular'
-    }
+    },
+
 })

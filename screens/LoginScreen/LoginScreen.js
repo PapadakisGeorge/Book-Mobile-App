@@ -11,7 +11,7 @@ const LoginScreen = ({navigation}) => {
             Alert.alert('Please enter your info in all required fields');
         } else {
             Alert.alert('Login successful!')
-            navigation.navigate('HomeScreen');
+            navigation.navigate('HomeScreen', {isLoggedIn: true});
         }
     }
 
@@ -34,7 +34,7 @@ const LoginScreen = ({navigation}) => {
                 </View>
                 <View style={loginScreenStyles.inputView}>
                     <TextInput
-                         style={loginScreenStyles.textInput}
+                        style={loginScreenStyles.textInput}
                         onChangeText={password => setLoginPassword(password)}
                         placeholder={'Enter your Password'}
                         secureTextEntry={true}
@@ -46,8 +46,8 @@ const LoginScreen = ({navigation}) => {
             </TouchableOpacity>
             <TouchableOpacity style={loginScreenStyles.loginButton}>
                 <Text
-                style={loginScreenStyles.loginText}
-                onPress={() => login()}
+                    style={loginScreenStyles.loginText}
+                    onPress={() => login()}
                 >LOGIN</Text>
             </TouchableOpacity>
     </View>
